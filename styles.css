@@ -1,0 +1,133 @@
+:root {
+    --dark-blue: rgb(13, 13, 99);
+    --body-bg: rgb(3, 3, 49);
+    --btn-text: #EEEEEE;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-bg);
+}
+
+/* Implementing the scoreboard red font */
+@font-face {
+    font-family: 'Cursed Timer';
+    src: url(fonts/CursedTimerULiL.ttf);
+    font-style: normal;
+}
+
+/* Scoreboard styling */
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--dark-blue);
+    margin: 0 auto;
+    margin-top: 5em;
+}
+
+.scores {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.home, 
+.guest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 0.5em 0;
+}
+
+h3 {
+    margin: 0.1em 0;
+}
+
+#home-score,
+#guest-score,
+#time,
+#period {
+    background: black;
+    text-align: center;
+    color: red;
+    font-family: 'Cursed Timer';
+    font-size: xx-large;
+}
+
+#home-score,
+#guest-score,
+#time {
+    width: 40%;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 0.5em;
+}
+
+/* Buttons */
+.buttons button {
+    font-family: 'Cursed Timer';
+    padding: 0.3em;
+}
+
+#new-game,
+#pause-game {
+    padding: 0.6em;
+}
+
+.buttons button,
+#new-game,
+#pause-game {
+    border: none;
+    margin: 0 0.2em;
+    background-color: var(--dark-blue);
+    color: var(--btn-text);
+    border: solid 1px var(--btn-text);
+    border-radius: 0.3em;
+}
+
+
+.buttons button:hover,
+#new-game:hover,
+#pause-game:hover {
+    cursor: pointer;
+    background-color: var(--btn-text);
+    color: var(--dark-blue);
+    border: solid 1px var(--dark-blue);
+}
+
+/* Period styling */
+#period {
+    border-radius: 0.3em;
+    width: 30px;
+    padding: 0.2em;
+}
+
+.period-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    .scoreboard {
+        width: 400px;
+        padding: 2em 4em;
+    }
+
+    .buttons button {
+        padding: 0.6em;
+    }
+}
